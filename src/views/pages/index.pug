@@ -1,6 +1,9 @@
 extends ../auth.layout.pug
 
 block content
-  .hello-world
-    +icon('check', 'hello-world__block')
-    .inlined-svg
+  .wrapper
+    .maincontent
+      section.section.welcome
+        include button
+        include welcome
+        include ../common/footer

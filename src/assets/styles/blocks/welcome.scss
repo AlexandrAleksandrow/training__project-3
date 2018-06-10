@@ -1,0 +1,106 @@
+.welcome__block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 379px;
+  height: 350px;
+  background: $white;
+  opacity: .9;
+  border-radius: 7px 7px 0 0; 
+}
+
+.weclome__content {
+  text-align: center;
+}
+
+.author__face {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.author__name {
+  margin-bottom: 10px;
+}
+
+.auhthor__greeting {
+  margin-bottom: 35px;
+}
+
+.social__list {
+  display: flex;
+  justify-content: center;
+}
+
+.social__link {
+  display: block;
+  width: 35px;
+  height: 35px;
+}
+
+.vk__svg {
+  background: svg-load('../../images/icons/vk.svg', fill=$green) center center no-repeat;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  opacity: .7;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.github__svg {
+  background: svg-load('../../images/icons/github.svg', fill=$green) center center no-repeat;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  opacity: .7;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 380px;    
+}
+
+.menu__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 33.33333%;
+  height: 50px;
+  background: $green;
+  opacity: .8;
+  cursor: pointer;
+  border-left: 1px solid $white;
+
+  &:first-child {
+    border-left: none;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.menu__link {
+  text-decoration: none;
+  color: $white;
+  font-weight: 500;
+}
+
+.left__corner {
+  border-radius: 0 0 0  7px;
+}
+
+.right__corner {
+  border-radius: 0 0 7px 0;
+}

@@ -1,0 +1,24 @@
+/*.inlined-svg {
+  background: svg-load('github.svg', fill=$green) center center no-repeat;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  
+  &:hover {
+    background-image: svg-load('github.svg', fill=red);
+  }
+}*/
+
+section { 
+  height: 100vh;
+  position: relative;
+  //min-height: rem(650px);
+}
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;    
+	background: url(../../images/mount.jpg) center center/cover no-repeat $light-grey;
+}
