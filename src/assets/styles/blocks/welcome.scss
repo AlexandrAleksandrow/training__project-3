@@ -64,6 +64,18 @@
   }
 }
 
+.inst__svg {
+  background: svg-load('../../images/icons/in.svg', fill=$green) center center no-repeat;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  opacity: .7;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
 .menu {
   display: flex;
   justify-content: center;
