@@ -1,0 +1,82 @@
+.hero_links {
+    display: flex;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
+.about__social-img {
+    display: block;
+    width: 25px;
+    height: 25px;
+    fill: $white;
+    margin-right: 30px;
+    
+    &:hover {        
+        fill: $grey;
+    }
+
+    &:last-child {
+        margin-right: 0px;
+    }
+}
+
+.section__title {
+    background: url(../../assets/images/mount.jpg) center center/cover no-repeat;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.hamburger__img {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    display: block;
+    width: 25px;
+    height: 25px;
+    fill: $grey;
+
+    &:hover {
+        fill: $green;
+    }
+}
+
+.user__pic-img {
+    width: 140px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.user__description {
+    text-align: center;
+    color: $white;
+}
+
+.user__name {
+    font-size: 35px;
+}
+
+.user__info {
+    font-size: 16px;
+}
+
+.arrow-down__img {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    width: 30px;
+    height: 20px;
+    fill: $white;
+}
+  
+  

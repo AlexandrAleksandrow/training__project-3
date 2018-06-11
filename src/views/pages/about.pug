@@ -9,20 +9,27 @@ block scripts
 block content
   section.hero
     .hero_links
-      include social.background-wgite
+      a.social__link(href="http://vk.com/id448870148", target="_blank")
+        +icon('vk', 'about__social-img') 
+      a.social__link(href="https://github.com/AlexandrAleksandrow/", target="_blank")
+        +icon('github', 'about__social-img')
+      a.social__link(href="https://github.com/AlexandrAleksandrow/", target="_blank")
+        +icon('in', 'about__social-img') 
+      
     a(href="#").hamburger.hero__menu
+      +icon('hamburger', 'hamburger__img')
 
     .hero__title
-      .section__title
-        img.section__title-pic(src="../../images/mount.jpg", alt="mount")    
+      .section__title      
         .user
-          .user__pic
-            img.user__pic-img(src="../../images/face.jpg", alt="face")
+          .user__pic            
+            +image('../../assets/images/face.jpg', 'face', 'user__pic-img')
           .user__description
             .user__name Александр Лимасов
-            .user__info Начинающий вебразработчик
+            .user__info Начинающий веб разработчик
     
     a(href="#").hero_down-btn.down__btn
+      +icon('arrow_down', 'arrow-down__img')
 
   section.about
     .about__left
