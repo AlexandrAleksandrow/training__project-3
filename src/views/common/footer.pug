@@ -1,2 +1,22 @@
 footer.footer
-  p &copy; Alexandr Limasow | created in LoftSchool | 2018
+  .footer__row
+    .footer__col-left
+      nav.footer__menu
+        ul.menu__list
+          li.menu__items: a.menu__link(href="#", title="myWorks") Мои работы
+          li.menu__items: a.menu__link(href="about.html", title="about") Обо мне
+          li.menu__items: a.menu__link(href="#", title="blog") Блог
+          li.menu__items: a.menu__link(href="#", title="authorization") Авторизация
+    .footer__col-right
+      .footer__social
+        .footer__block: a.footer__social-link(href="http://vk.com/id448870148", target="_blank")
+          +icon('vk', 'footer__social-img') 
+        .footer__block: a.footer__social-link(href="https://github.com/AlexandrAleksandrow/", target="_blank")
+          +icon('github', 'footer__social-img')
+        .footer__block: a.footer__social-link(href="https://github.com/AlexandrAleksandrow/", target="_blank")
+          +icon('in', 'footer__social-img')
+  .footer__row
+    .footer__col-left
+      p.footer__desc Я начинающий веб разработчик и этот сайт я сделал в рамках <br> обучения в школе онлайн образования LoftSchool
+    .footer__col-right
+      p.footer__copy &copy; Alexandr Limasow | created in LoftSchool | 2018

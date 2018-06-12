@@ -70,13 +70,213 @@
     font-size: 16px;
 }
 
-.arrow-down__img {
+.down__btn {
     position: absolute;
     bottom: 10%;
     left: 50%;
+    transform: translateX(-50%);
+}
+
+.arrow-down__img {    
     width: 30px;
     height: 20px;
     fill: $white;
 }
   
+.about {
+    display: flex;
+    height: 100vh;
+}
+
+.about__left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+
+.triangle_fill_white {   
+    position: absolute;
+    top: -10%;
+    left: 0;
+    fill: #fff;    
+    width: 50%;
+    height: 10%;
+}
+
+.block__title {
+    font-family: "bernier";
+    font-size: 63px;
+    line-height: 1;
+}
+
+.block__subtitle {
+    margin: 0;
+    padding: 0;    
+    line-height: 1;
+}
+
+.user-description__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.user-description__data {
+    padding: 0 5%;
+}
+
+.user-description__avatar {
+    width: 300px;
+    height: 350px;
+    border-radius: 10px;
+}
+
+.user-descrioption__titile {
+    text-align: center;
+    font-family: "bernier";
+    font-size: 35px;
+}
+
+.text__content {
+    text-align: center;
+    font-size: 16px;
+    font-family: "Roboto";
+}
+
   
+.about__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background: $beige;
+}
+
+.triangle_fill_beige {
+    position: absolute;
+    top: -10%;
+    right: 0;
+    fill: $beige;    
+    width: 50%;
+    height: 10%;
+}
+
+.block__subtitle {
+    text-align: center;
+    font-family: "bernier";
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.about__right-description {
+    font-size: 16px;
+    font-family: "Roboto";
+    margin-bottom: 10px;
+}
+
+.skills-row__title {
+    font-size: 28px;
+    font-family: "Roboto";
+    margin-bottom: 10px;             
+}
+
+.skills-row__list {
+    display: flex;
+}
+
+.skills-row__item {
+    margin-right: 15px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.skill {
+    display: block;
+    position: relative;
+    width: 110px;
+    height: 110px;
+    margin: 0;
+}
+
+.skill__figure {
+    position: absolute;
+    top: 0;
+    left: 0;
+    widows: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.skill__circle {
+    fill: transparent;
+    stroke-width: 20px;    
+}
+
+.skill__circle_above {
+    stroke: $green;
+    stroke-dasharray: 251;
+    stroke-dashoffset: 45;
+}  
+
+.skill__title {
+    font-size: 12px;
+    font-family: "Roboto";
+    color: $green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.map {
+    background: url(../../assets/images/map.jpg) center center/cover no-repeat; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+}
+
+.map__data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    height: 300px;
+    background: $white;
+    opacity: .8;
+    border-radius: 10px;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.contacts-data {
+    width: 100%;
+    height: 280px;
+    margin: 0;
+    padding: 5%; 
+}
+
+.contacts__row {
+ display: flex;
+ margin-bottom: 20px;
+ text-decoration: none;
+ text-decoration: none;
+}
+
+.contacts__icon-img {
+    width: 30px;
+    height: 30px;
+    fill: $green;
+    margin-right: 5%;
+}
+
+
