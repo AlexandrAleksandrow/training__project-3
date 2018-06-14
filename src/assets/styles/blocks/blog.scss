@@ -1,0 +1,176 @@
+.blog {
+  position: relative;
+  height: 500px;
+}    
+
+.hero_links {
+  display: flex;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+
+.about__social-img {
+  display: block;
+  width: 25px;
+  height: 25px;
+  fill: $white;
+  margin-right: 30px;
+  
+  &:hover {        
+      fill: $grey;
+  }
+
+  &:last-child {
+      margin-right: 0px;
+  }
+}
+
+.section__caption {
+  background: url(../../assets/images/mount.jpg) center center/cover no-repeat;
+  display: flex;
+  width: 100%;
+  height: 500px;
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburger__img {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  display: block;
+  width: 25px;
+  height: 25px;
+  fill: $grey;
+
+  &:hover {
+      fill: $green;
+  }
+}
+
+.user__pic-img {
+  width: 140px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.caption__description {
+  text-align: center;
+  color: $white;
+}
+
+.caption__name {
+  font-size: 35px;
+}
+
+.caption__info {
+  font-size: 16px;
+}
+
+
+// появлятеся на планшете
+.down__btn {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.arrow-down__img {    
+  width: 30px;
+  height: 20px;
+  fill: $white;
+}
+
+.articles {
+  max-height: 200vh;
+}
+
+.triangle__left {   
+  position: absolute;
+  top: -10%;
+  left: 0;
+  fill: #ffffff;    
+  width: 50%;
+  height: 10%;
+}
+
+.triangle__right {
+  position: absolute;
+  top: -10%;
+  right: 0;
+  fill: #ffffff;    
+  width: 50%;
+  height: 10%;
+}
+
+.articles {
+  display: flex;
+  padding: 5%;
+  justify-content: flex-start;
+}
+
+.articles__list {
+  width: 20%;
+  margin-right: 10%;
+  text-align: right;
+}
+
+.articles__item {
+  font-size: 16px;
+  font-family: "Roboto";
+  margin-bottom: 25px;
+  font-weight: 500;
+  cursor: pointer;    
+}
+
+.articles__item--active {
+  color: $green;
+}
+
+
+
+
+
+
+
+
+
+
+.articles__content {
+  width: 60%;
+  text-align: justify;
+}
+
+.articles__block {
+  border-bottom: 5px solid $light-grey;
+  margin-bottom: 60px;
+}
+
+.articles__caption {
+  font-size: 35px;
+  font-family: "bernier";
+  line-height: 1;
+  margin-bottom: 30px;
+}
+
+.articles__date {
+  color: $green;
+  margin-bottom: 30px;
+}
+
+.articles__text {
+  margin-bottom: 70px;
+}
+
+.articles__paragraph {
+  text-indent: 30px;
+}
+

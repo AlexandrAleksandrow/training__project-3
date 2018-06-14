@@ -1,0 +1,78 @@
+extends ../main.layout.pug
+
+block variables
+  - var title = 'Блог'
+
+block scripts
+  script(src='about.bundle.js')
+
+block content
+  section.blog
+      .hero_links
+        a.social__link(href="http://vk.com/id448870148", target="_blank")
+          +icon('vk', 'about__social-img') 
+        a.social__link(href="https://github.com/AlexandrAleksandrow/", target="_blank")
+          +icon('github', 'about__social-img')
+        a.social__link(href="https://github.com/AlexandrAleksandrow/", target="_blank")
+          +icon('in', 'about__social-img') 
+        
+      a(href="#").hamburger.hero__menu
+        +icon('hamburger', 'hamburger__img')
+
+      .blog__caption
+        .section__caption      
+          .user
+            .user__pic            
+              +image('../../assets/images/face.jpg', 'face', 'user__pic-img')
+            .caption__description
+              .caption__name - Блог -
+              .caption__info Мои статьи
+
+  section.articles
+    .triangles
+      svg(viewBox="0 0 500 100" preserveAspectRatio="none").triangle.triangle__left
+        <polygon points="0 0, 500 100, 0 100"/>
+      svg(viewBox="0 0 500 100" preserveAspectRatio="none").triangle.triangle__right
+           <polygon points="500 0, 500 100, 0 100"/>
+    ul.articles__list
+      li.articles__item.articles__item--active Статья 1
+      li.articles__item Статья 2
+      li.articles__item Статья 3
+      li.articles__item Статья 4
+      li.articles__item Статья 5
+    .articles__content
+      .articles__block
+        h3.articles__caption Статья 1
+        p.articles__date 10.06.2018
+        .articles__text 
+          p.articles__paragraph Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus necessitatibus et a, quas nisi, omnis, similique pariatur eius dicta unde quibusdam eveniet molestiae nostrum itaque explicabo quasi exercitationem corrupti repellat.
+          p.articles__paragraph Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus necessitatibus et a, quas nisi, omnis, similique pariatur eius dicta unde quibusdam eveniet molestiae nostrum itaque explicabo quasi exercitationem corrupti repellat.
+          p.articles__paragraph Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus necessitatibus et a, quas nisi, omnis, similique pariatur eius dicta unde quibusdam eveniet molestiae nostrum itaque explicabo quasi exercitationem corrupti repellat.
+      .articles__block
+        h3.articles__caption Статья 2
+        p.articles__date 11.06.2018
+        .articles__text
+          p.articles__paragraph Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus necessitatibus et a, quas nisi, omnis, similique pariatur eius dicta unde quibusdam eveniet molestiae nostrum itaque explicabo quasi exercitationem corrupti repellat.
+          p.articles__paragraph Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus necessitatibus et a, quas nisi, omnis, similique pariatur eius dicta unde quibusdam eveniet molestiae nostrum itaque explicabo quasi exercitationem corrupti repellat.
+          p.articles__paragraph Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus necessitatibus et a, quas nisi, omnis, similique pariatur eius dicta unde quibusdam eveniet molestiae nostrum itaque explicabo quasi exercitationem corrupti repellat.
+      .articles__block
+        h3.articles__caption Статья 3
+        p.articles__date 12.06.2018
+        .articles__text
+          p.articles__paragraph Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus necessitatibus et a, quas nisi, omnis, similique pariatur eius dicta unde quibusdam eveniet molestiae nostrum itaque explicabo quasi exercitationem corrupti repellat.
+          p.articles__paragraph Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus necessitatibus et a, quas nisi, omnis, similique pariatur eius dicta unde quibusdam eveniet molestiae nostrum itaque explicabo quasi exercitationem corrupti repellat.
+          p.articles__paragraph Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus necessitatibus et a, quas nisi, omnis, similique pariatur eius dicta unde quibusdam eveniet molestiae nostrum itaque explicabo quasi exercitationem corrupti repellat.
+      .articles__block
+        h3.articles__caption Статья 4
+        p.articles__date 13.06.2018
+        .articles__text
+          p.articles__paragraph Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus necessitatibus et a, quas nisi, omnis, similique pariatur eius dicta unde quibusdam eveniet molestiae nostrum itaque explicabo quasi exercitationem corrupti repellat.
+          p.articles__paragraph Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus necessitatibus et a, quas nisi, omnis, similique pariatur eius dicta unde quibusdam eveniet molestiae nostrum itaque explicabo quasi exercitationem corrupti repellat.
+          p.articles__paragraph Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus necessitatibus et a, quas nisi, omnis, similique pariatur eius dicta unde quibusdam eveniet molestiae nostrum itaque explicabo quasi exercitationem corrupti repellat.
+      .articles__block
+        h3.articles__caption Статья 5
+        p.articles__date 14.06.2018
+        .articles__text
+          p.articles__paragraph Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus necessitatibus et a, quas nisi, omnis, similique pariatur eius dicta unde quibusdam eveniet molestiae nostrum itaque explicabo quasi exercitationem corrupti repellat.
+          p.articles__paragraph Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus necessitatibus et a, quas nisi, omnis, similique pariatur eius dicta unde quibusdam eveniet molestiae nostrum itaque explicabo quasi exercitationem corrupti repellat.
+          p.articles__paragraph Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus necessitatibus et a, quas nisi, omnis, similique pariatur eius dicta unde quibusdam eveniet molestiae nostrum itaque explicabo quasi exercitationem corrupti repellat.
