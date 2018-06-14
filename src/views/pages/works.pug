@@ -1,0 +1,55 @@
+extends ../main.layout.pug
+
+block variables
+  - var title = 'Обо мне'
+
+block scripts
+  script(src='about.bundle.js')
+
+block content
+  section.hero
+    .hero_links
+      a.social__link(href="http://vk.com/id448870148", target="_blank")
+        +icon('vk', 'about__social-img') 
+      a.social__link(href="https://github.com/AlexandrAleksandrow/", target="_blank")
+        +icon('github', 'about__social-img')
+      a.social__link(href="https://github.com/AlexandrAleksandrow/", target="_blank")
+        +icon('in', 'about__social-img') 
+      
+    a(href="#").hamburger.hero__menu
+      +icon('hamburger', 'hamburger__img')
+
+    .hero__title
+      .section__title      
+        .user
+          .user__pic            
+            +image('../../assets/images/face.jpg', 'face', 'user__pic-img')
+          .user__description
+            .user__name Александр Лимасов
+            .user__info Начинающий веб разработчик
+    
+    a(href="#").hero_down-btn.down__btn
+      +icon('arrow_down', 'arrow-down__img')
+
+  section.works
+  section.feedback
+    .feedback__title
+      h2.feedback__ttitle-text Что говорят обо мне
+    .feedback__comments
+      .feedback__comments-content
+        .feedback__text " <br> Этот парень проходил обучение веб разработк не где-то, а в LoftSchool! Это бессонные ночи и тяжелые испытания !
+        .feedback__man
+          .feedback__man-img
+            +image('../../assets/images/koval.png', 'feedback__man', 'feedback__man-pic')
+          .feedback__man-name Дмитрий Ковальчук
+          .feedback__man-description Основатель LoftScholl
+      .feedback__comments-content
+        .feedback__text " <br> Этот парень проходил обучение веб разработк не где-то, а в LoftSchool! Это бессонные ночи и тяжелые испытания !
+        .feedback__man
+          .feedback__man-img
+            +image('../../assets/images/saban.png', 'feedback__man', 'feedback__man-pic')
+          .feedback__man-name Владимир Сабанцев
+          .feedback__man-description Преподаватель LoftScholl 
+        
+        
+            

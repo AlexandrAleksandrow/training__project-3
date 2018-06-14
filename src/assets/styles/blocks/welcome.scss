@@ -83,7 +83,7 @@
   width: 380px;    
 }
 
-.menu__item {
+.menu__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -93,6 +93,9 @@
   opacity: .8;
   cursor: pointer;
   border-left: 1px solid $white;
+  text-decoration: none;
+  color: $white;
+  font-weight: 500;
 
   &:first-child {
     border-left: none;
@@ -103,11 +106,6 @@
   }
 }
 
-.menu__link {
-  text-decoration: none;
-  color: $white;
-  font-weight: 500;
-}
 
 .left__corner {
   border-radius: 0 0 0  7px;

@@ -1,0 +1,44 @@
+.map {
+  background: url(../../assets/images/map.jpg) center center/cover no-repeat; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: normal;
+}
+
+.map__data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  height: 300px;
+  background: $white;
+  opacity: .8;
+  border-radius: 10px;
+
+  &:hover {
+      opacity: 1;
+  }
+}
+
+.contacts-data {
+  width: 100%;
+  height: 280px;
+  margin: 0;
+  padding: 5%; 
+}
+
+.contacts__row {
+display: flex;
+margin-bottom: 20px;
+text-decoration: none;
+text-decoration: none;
+}
+
+.contacts__icon-img {
+  width: 30px;
+  height: 30px;
+  fill: $green;
+  margin-right: 5%;
+}
