@@ -1,0 +1,177 @@
+// form
+
+.auth {
+  position: relative;
+  display: /*flex*/none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 380px;
+  height: 410px;
+  background: $white;
+  opacity: 0.9;
+  padding: 2%;
+  border-radius: 5px;
+}
+
+.auth__title {
+  font-size: 35px;
+  font-family: "bernier";
+  line-height: 1.2;
+  text-align: center;
+  margin-bottom: 40px;    
+}
+
+.auth__row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.auth__input-pic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  background: $light-grey;
+  border: 1px solid transparent;
+  border-radius: 5px 0 0 5px;
+}
+
+.auth__input-ico {
+  width: 20px;
+  height: 20px;
+  fill: $grey;
+}
+
+.auth__input {
+  width: 290px;
+  height: 45px;
+  border: 1px solid transparent;
+  border-radius: 0 5px 5px 0;
+  padding: 5px;
+}
+
+.auth__checkbox {
+  display: flex;
+}
+
+.auth__checkbox--invisible {
+  
+  
+  &:checked + .auth__checkbox--visible {
+    background: $green;
+    border: transparent;
+  } 
+}
+
+.auth__checkbox--visible {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  margin-right: 10px;
+  cursor: pointer;
+  border: 1px solid $grey;
+  border-radius: 3px;
+}
+
+.auth__checkbox-pic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: block;
+  width: 20px;
+  height: 20px;  
+  color: $white;
+  background: svg-load('check.svg', fill=$white) center center no-repeat;
+}
+
+.auth__radio {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.auth__subtitle {
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-family: "Roboto";
+    line-height: 1.5;
+}
+
+.auth__button {
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.form__circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border: 1px solid $grey;
+  border-radius: 50%;
+}
+
+.form__circle-inner {
+  display: none/*block*/;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: $green;
+}
+
+.auth__radioBtn {
+
+  &:checked + .form__circle .form__circle-inner {
+    display: block;
+  }
+
+  &:checked ~ .auth__radio-text {
+    color:  $green;
+  }
+}
+
+.row-btn {
+  position: absolute;
+  left: 0; 
+  bottom: 0;
+  width: 100%;   
+}
+
+.auth__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 45px;
+  background: $green;
+  border-right: 1px solid $white;
+  color: $white;
+  text-decoration: none;
+
+  &:last-child {
+    border-right: none;
+  }
+}
+
+.left-btn {
+  border-radius: 0 0 0 5px;
+}
+
+.right-btn {
+  border-radius: 0 0 5px 0;
+}

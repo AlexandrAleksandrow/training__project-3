@@ -1,6 +1,5 @@
 .blog {
-  position: relative;
-  height: 500px;
+  position: relative; 
 }    
 
 .hero_links {
@@ -90,31 +89,29 @@
 }
 
 .articles {
-  max-height: 200vh;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;  
+}
+
+.triangles {
+  position: absolute;
+  top: -235px;
+  left: 0;
+  display: flex;
+  width: 100%;
 }
 
 .triangle__left {   
-  position: absolute;
-  top: -10%;
-  left: 0;
-  fill: #ffffff;    
-  width: 50%;
-  height: 10%;
+  fill: #ffffff;
+  width: 50%;    
+  height: 100px;
 }
 
 .triangle__right {
-  position: absolute;
-  top: -10%;
-  right: 0;
   fill: #ffffff;    
+  height: 100px;
   width: 50%;
-  height: 10%;
-}
-
-.articles {
-  display: flex;
-  padding: 5%;
-  justify-content: flex-start;
 }
 
 .articles__list {

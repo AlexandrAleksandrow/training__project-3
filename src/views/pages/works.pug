@@ -32,24 +32,70 @@ block content
       +icon('arrow_down', 'arrow-down__img')
 
   section.works
+    .works__caption
+      +icon('works_header', 'works_caption-ico')
+      h2.works__caption-text - Мои работы -
+    .works__block
+      .works__left
+        .works__site
+          h3.works__name Сайт авиакомпании
+          .works__decs HTML, CSS
+        .works__site
+          h3.works__name Лендинг BurgerSchop
+          .works__decs HTML, CSS, JS
+        .works__site
+          h3.works__name Учебное портфолио
+          .works__decs HTML, CSS, JS, Gulp, Webpack, Vue
+        a(href="#").works__button
+          +icon('link', 'works__button-ico')
+          p.works__button-text Посмотреть сайт
+
+      .works__right
+
+
+
+
+
+
+
+
   section.feedback
     .feedback__title
-      h2.feedback__ttitle-text Что говорят обо мне
+      p.feedback__ttitle-text - Что обо мне - <br> говорят 
     .feedback__comments
       .feedback__comments-content
-        .feedback__text " <br> Этот парень проходил обучение веб разработк не где-то, а в LoftSchool! Это бессонные ночи и тяжелые испытания !
+        .feedback__text 
+          p.feedback__curl &#8220; 
+          p.feedback__text-content Этот парень проходил обучение веб разработке не где-то, а в LoftSchool! Это бессонные ночи и тяжелые испытания !
         .feedback__man
           .feedback__man-img
             +image('../../assets/images/koval.png', 'feedback__man', 'feedback__man-pic')
-          .feedback__man-name Дмитрий Ковальчук
-          .feedback__man-description Основатель LoftScholl
+          .feedback__man-block
+            .feedback__man-name Дмитрий Ковальчук
+            .feedback__man-description Основатель LoftScholl
       .feedback__comments-content
-        .feedback__text " <br> Этот парень проходил обучение веб разработк не где-то, а в LoftSchool! Это бессонные ночи и тяжелые испытания !
+        .feedback__text
+          p.feedback__curl &#8220; 
+          p.feedback__text-content Это достойный код! Только не открывайте его в слишком старых браузерах.
         .feedback__man
           .feedback__man-img
             +image('../../assets/images/saban.png', 'feedback__man', 'feedback__man-pic')
-          .feedback__man-name Владимир Сабанцев
-          .feedback__man-description Преподаватель LoftScholl 
-        
+          .feedback__man-block
+            .feedback__man-name Владимир Сабанцев
+            .feedback__man-description Преподаватель LoftScholl 
+    .form__block
+      .form__blur
+      form.form(action="" name="form")
+        h3.form__caption - связаться со мной -
+        input.form__input(type="text" placeholder="Имя")
+        input.form__input(type="text" placeholder="Email") 
+        textarea.form__textarea(name="textarea", placeholder="Ваше сообщение")
+        .form__block-button
+          button.form__button.button__left Отправить
+          button.form__button.button__right Очистить
+
+    a(href="#").feedback__arrow
+      +icon('arrow_down', 'feedback__arrow-ico')
+  
         
             

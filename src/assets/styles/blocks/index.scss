@@ -10,7 +10,7 @@
 }*/
 
 section { 
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   //min-height: rem(650px);
 }
@@ -21,4 +21,128 @@ section {
   justify-content: center;
   align-items: center;    
 	background: url(../../assets/images/mount.jpg) center center/cover no-repeat $light-grey;
+}
+
+.welcome__block {
+  display: flex /*none*/;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 379px;
+  height: 350px;
+  background: $white;
+  opacity: .95;
+  border-radius: 7px 7px 0 0; 
+}
+
+.weclome__content {
+  text-align: center;
+}
+
+.author__face {
+  width: 140px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.author__name {
+  margin-bottom: 10px;
+}
+
+.auhthor__greeting {
+  margin-bottom: 35px;
+}
+
+.social__list {
+  display: flex;
+  justify-content: center;
+}
+
+.social__link {
+  display: block;
+  width: 35px;
+  height: 35px;
+}
+
+.vk__svg {
+  background: svg-load('../../images/icons/vk.svg', fill=$green) center center no-repeat;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  opacity: .7;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.github__svg {
+  background: svg-load('../../images/icons/github.svg', fill=$green) center center no-repeat;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  opacity: .7;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.inst__svg {
+  background: svg-load('../../images/icons/in.svg', fill=$green) center center no-repeat;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  opacity: .7;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 380px;    
+}
+
+.menu__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 33.33333%;
+  height: 50px;
+  background: $green;
+  opacity: .8;
+  cursor: pointer;
+  border-left: 1px solid $white;
+  text-decoration: none;
+  color: $white;
+  font-weight: 500;
+
+  &:first-child {
+    border-left: none;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.left__corner {
+  border-radius: 0 0 0  7px;
+}
+
+.right__corner {
+  border-radius: 0 0 7px 0;
+}
+
+.copy {
+  color: $white;
+  font-weight: 300;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 10px;
 }

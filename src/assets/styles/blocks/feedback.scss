@@ -1,12 +1,159 @@
 .feedback {
   background: url(../../assets/images/feedback.png) center center/cover no-repeat;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .feedback__title {
+  background: url(../../assets/images/aboutfb.png) center center no-repeat;
   text-align: center;
+  margin-bottom: 50px;
+  width: 80%;  
 }
 
 .feedback__ttitle-text {
-  font-size: 263;
+  font-size: 63px;
   font-family: "bernier";
+  line-height: 1.5;
+}
+
+.feedback__comments {
+  display: flex;
+  width: 85%;
+  margin-bottom: 70px;
+}
+
+.feedback__comments-content {
+  width: 50%;
+}
+
+.feedback__curl {
+  font-size: 55px;
+  font-family: "fontawesome";
+  line-height: 0.5;
+}
+
+.feedback__text {
+  margin-bottom: 30px;
+}
+
+.feedback__text-content {
+  font-size: 16px;
+  font-family: "Roboto";
+  text-align: center;
+}
+
+.feedback__man {
+  display: flex;
+}
+
+.feedback__man-img {
+  margin-right: 20px;
+}
+
+.feedback__man-name,
+.feedback__man-description {
+  color: $green;
+}
+
+
+//form
+
+.form__block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form__blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 435px;
+  background: #ffffff; // подставить нужный фон + js
+  opacity: .5;
+  filter: blur(2px);
+}
+
+.form {  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 380px;
+  height: 440px;
+  border-radius: 5px;
+  margin-bottom: 160px;
+  z-index: 10;
+}
+
+.form__caption {
+  font-size: 35px;
+  font-family: "bernier";
+  line-height: 1.1;
+  margin-bottom: 40px;
+}
+
+.form__input {
+  width: 95%;
+  height: 50px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 1%;
+  margin-bottom: 20px;
+}
+
+.form__textarea {
+  width: 95%;
+  height: 140px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 1%;
+  margin-bottom: 20px;
+}
+
+.form__block-button {
+  width: 100%;
+}
+
+.form__button {
+  width: 50%;
+  height: 50px;
+  background-color: $green;
+  color: $white;
+  font-size: 16px;
+  font-family: "Roboto";
+  border-right: 1px solid $white;
+
+  &:last-child {
+    border-right: none;
+  }
+}
+
+.button__left {
+  border-radius: 0 0 0 5px;
+}
+
+.button__right {
+  border-radius: 0 0 5px 0;
+}
+
+.feedback__arrow {
+  position: absolute;
+  bottom: 8%;
+  left: 50%; 
+  transform: translateX(-50%);
+}
+
+.feedback__arrow-ico {
+  width: 30px;
+  height: 30px;
+  fill: $white;
+  transform: rotate(180deg);
 }
