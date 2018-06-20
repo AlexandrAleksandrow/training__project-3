@@ -7,26 +7,7 @@ block scripts
   script(src='about.bundle.js')
 
 block content
-  section.blog
-      .hero_links
-        a.social__link(href="http://vk.com/id448870148", target="_blank")
-          +icon('vk', 'about__social-img') 
-        a.social__link(href="https://github.com/AlexandrAleksandrow/", target="_blank")
-          +icon('github', 'about__social-img')
-        a.social__link(href="https://github.com/AlexandrAleksandrow/", target="_blank")
-          +icon('in', 'about__social-img') 
-        
-      a(href="#").hamburger.hero__menu
-        +icon('hamburger', 'hamburger__img')
-
-      .blog__caption
-        .section__caption      
-          .user
-            .user__pic            
-              +image('../../assets/images/face.jpg', 'face', 'user__pic-img')
-            .caption__description
-              .caption__name - Блог -
-              .caption__info Мои статьи
+  include header
 
   section.articles
     .triangles

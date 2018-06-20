@@ -8,14 +8,15 @@ block content
       .weclome__content
         img.author__face(src='../../assets/images/face.jpg', alt='author__face')          
         .author__name Лимасов Александр
-        .auhthor__greeting Начинающий веб разработчик
+        .auhthor__greeting Начинающий веб разработчик 
         include social
 
-    .menu
-      a.menu__link.left__corner(href="works.html", title="myWorks") Мои работы
-      a.menu__link(href="about.html", title="about") Обо мне
-      a.menu__link.right__corner(href="blog.html", title="blog") Блог
-      p.copy &copy; Alexandr Limasow | created in LoftSchool | 2018
+      .menu
+        a.menu__link.left__corner(href="works.html", title="myWorks") Мои работы
+        a.menu__link(href="about.html", title="about") Обо мне
+        a.menu__link.right__corner(href="blog.html", title="blog") Блог
+    
+    p.copy &copy; Alexandr Limasow | created in LoftSchool | 2018
     
     
     //- uathorization
@@ -32,7 +33,7 @@ block content
           +icon('password', 'auth__input-ico')
         input.auth__input(type="text" placeholder="Пароль")
       .auth__row
-        label.auth__checkbox(for="#")
+        label.auth__checkbox
           input.auth__checkbox--invisible(type="checkbox" name="check__box")
           .auth__checkbox--visible
             .auth__checkbox-pic
@@ -41,18 +42,18 @@ block content
       .auth__radio      
         h4.auth__subtitle Вы точно не робот?
         .auth__row
-          label(for="#").auth__button
-            input.auth__radioBtn(type="radio" name="yes" value="radio1" id="human")
+          label.auth__button
+            input.auth__radioBtn(type="radio" name="yes" value="radio1")
             .form__circle
               .form__circle-inner
             span.auth__radio-text Да
-          label(for="#").auth__button
-            input.auth__radioBtn(type="radio" name="yes" value="radio1" id="humanoid")
+          label.auth__button
+            input.auth__radioBtn(type="radio" name="yes" value="radio1")
             .form__circle
               .form__circle-inner
             span.auth__radio-text Не уверен
       .auth__row.row-btn   
         a.auth__btn.left-btn(href="#")
-          p.auth__btn-text На галавную
+          p.auth__btn-text На главную
         a.auth__btn.right-btn(href="#")
           p.auth__btn-text Войти   

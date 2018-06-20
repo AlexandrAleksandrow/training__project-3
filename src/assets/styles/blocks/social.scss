@@ -1,0 +1,46 @@
+.social__list {
+  display: flex;
+  justify-content: center;
+}
+
+.social__link {
+  display: block;
+  width: 35px;
+  height: 35px;
+}
+
+.vk__svg {
+  background: svg-load('../../images/icons/vk.svg', fill=$green) center center no-repeat;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  opacity: .7;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.github__svg {
+  background: svg-load('../../images/icons/github.svg', fill=$green) center center no-repeat;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  opacity: .7;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.inst__svg {
+  background: svg-load('../../images/icons/in.svg', fill=$green) center center no-repeat;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  opacity: .7;
+
+  &:hover {
+    opacity: 1;
+  }
+}

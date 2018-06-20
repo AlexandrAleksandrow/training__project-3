@@ -10,12 +10,13 @@
 }*/
 
 section { 
-  min-height: 100vh;
+ // min-height: 100vh;
   position: relative;
   //min-height: rem(650px);
 }
 
 .welcome {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,15 +25,16 @@ section {
 }
 
 .welcome__block {
-  display: flex /*none*/;
+  position: relative;
+  display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
-  width: 379px;
-  height: 350px;
+  min-height: 400px;
   background: $white;
   opacity: .95;
-  border-radius: 7px 7px 0 0; 
+  border-radius: 7px; 
+  padding-top: 20px;
 }
 
 .weclome__content {
@@ -54,58 +56,11 @@ section {
   margin-bottom: 35px;
 }
 
-.social__list {
-  display: flex;
-  justify-content: center;
-}
-
-.social__link {
-  display: block;
-  width: 35px;
-  height: 35px;
-}
-
-.vk__svg {
-  background: svg-load('../../images/icons/vk.svg', fill=$green) center center no-repeat;
-  width: 35px;
-  height: 35px;
-  cursor: pointer;
-  opacity: .7;
-
-  &:hover {
-    opacity: 1;
-  }
-}
-
-.github__svg {
-  background: svg-load('../../images/icons/github.svg', fill=$green) center center no-repeat;
-  width: 35px;
-  height: 35px;
-  cursor: pointer;
-  opacity: .7;
-
-  &:hover {
-    opacity: 1;
-  }
-}
-
-.inst__svg {
-  background: svg-load('../../images/icons/in.svg', fill=$green) center center no-repeat;
-  width: 35px;
-  height: 35px;
-  cursor: pointer;
-  opacity: .7;
-
-  &:hover {
-    opacity: 1;
-  }
-}
-
 .menu {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 380px;    
+  min-width: 380px;    
 }
 
 .menu__link {
@@ -117,13 +72,13 @@ section {
   background: $green;
   opacity: .8;
   cursor: pointer;
-  border-left: 1px solid $white;
+  border-right: 1px solid $white;
   text-decoration: none;
   color: $white;
   font-weight: 500;
 
-  &:first-child {
-    border-left: none;
+  &:last-child {
+    border-right: none;
   }
 
   &:hover {
@@ -140,9 +95,9 @@ section {
 }
 
 .copy {
-  color: $white;
-  font-weight: 300;
   position: absolute;
-  bottom: 0;
+  bottom: 0;  
+  color: $white;
+  font-weight: 300;  
   margin-bottom: 10px;
 }

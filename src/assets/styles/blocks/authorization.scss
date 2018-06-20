@@ -2,7 +2,7 @@
 
 .auth {
   position: relative;
-  display: /*flex*/none;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -59,9 +59,12 @@
 
 .auth__checkbox {
   display: flex;
+  position: relative;
 }
 
 .auth__checkbox--invisible {
+  position: absolute;
+  left: -999999px;
   
   
   &:checked + .auth__checkbox--visible {
@@ -107,9 +110,11 @@
 }
 
 .auth__button {
+  position: relative;
   display: flex;
   align-items: center;
   margin-right: 40px;
+  cursor: pointer;
 
   &:last-child {
     margin-right: 0;
@@ -124,10 +129,12 @@
   height: 20px;
   border: 1px solid $grey;
   border-radius: 50%;
+  margin-right: 10px;
+
 }
 
 .form__circle-inner {
-  display: none/*block*/;
+  display: none;
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -135,7 +142,9 @@
 }
 
 .auth__radioBtn {
-
+  position: absolute;
+  left: -9999px;
+  
   &:checked + .form__circle .form__circle-inner {
     display: block;
   }
@@ -162,9 +171,14 @@
   border-right: 1px solid $white;
   color: $white;
   text-decoration: none;
+  opacity: 0.9;
 
   &:last-child {
     border-right: none;
+  }
+
+  &:hover {
+    opacity: 1;
   }
 }
 
