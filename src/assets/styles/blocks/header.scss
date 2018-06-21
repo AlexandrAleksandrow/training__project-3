@@ -40,7 +40,11 @@
   fill: $grey;
 
   &:hover {
-      fill: $green;
+    fill: $green;
+  } 
+  
+  @include tablet {
+    fill: #ffffff;
   }
 }
 
