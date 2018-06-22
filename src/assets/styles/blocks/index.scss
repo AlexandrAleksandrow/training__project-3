@@ -60,15 +60,15 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 380px;    
+ // min-width: 380px;  
 }
 
 .menu__link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 33.33333%;
-  height: 50px;
+  //width: 33.33333%;
+ // height: 50px;
   background: $green;
   opacity: .8;
   cursor: pointer;
@@ -76,6 +76,7 @@ section {
   text-decoration: none;
   color: $white;
   font-weight: 500;
+  padding: 20px;
 
   &:last-child {
     border-right: none;

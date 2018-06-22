@@ -10,7 +10,10 @@ block content
   include header
 
   section.articles
-    //include triangles
+    svg(viewBox="0 0 500 100" preserveAspectRatio="none").triangle.triangle__left
+        <polygon points="0 0, 500 100, 0 100"/>
+    svg(viewBox="0 0 500 100" preserveAspectRatio="none").triangle.triangle__right
+        <polygon points="500 0, 500 100, 0 100"/>
 
     ul.articles__list
       li.articles__item.articles__item--active Статья 1

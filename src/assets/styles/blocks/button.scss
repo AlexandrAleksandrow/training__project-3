@@ -15,4 +15,9 @@
     background-color: #fff;
     color: $green;
   }
+
+  @include phone {        
+    left: 50%;
+    transform: translateX(-50%);    
+  }
 }

@@ -2,7 +2,11 @@
   height: 150px;
   width: 100%;
   background: #555b5e;
-  opacity: .9;    
+  opacity: .9;
+  
+  @include tablet {        
+    height: 200px;
+}
 }
 
 .footer__row {
@@ -16,6 +20,10 @@
   &:last-child {
       border-bottom: none;
   }
+
+  @include tablet {        
+    flex-direction: column;
+  }
 }
 
 .menu__list {
@@ -27,7 +35,11 @@
 
   &:last-child {
     margin-right: 0;
-  }  
+  } 
+  
+  @include tablet {        
+    margin-right: 10px;
+  }
 }
 
 .menu__links {
@@ -38,6 +50,10 @@
   
   &:hover {
       color: $green;
+  }
+
+  @include tablet {        
+    font-size: 14px;
   }
 }
 
@@ -82,11 +98,20 @@ a.footer__social-link {
 .footer__desc {
   font-size: 16px;
   font-family: "Roboto";
-  color: $white;    
+  color: $white; 
+  
+  @include tablet {        
+    text-align: center;
+    font-size: 12px;    
+  }
 }
 
 .footer__copy {
   font-size: 16px;
   font-family: "Roboto";
-  color: $white;      
+  color: $white; 
+  
+  @include tablet {   
+    font-size: 12px;    
+  }
 }

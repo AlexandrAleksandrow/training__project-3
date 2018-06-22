@@ -3,33 +3,21 @@
   position: relative;
   display: flex;
   justify-content: flex-start;
-  padding-top: 40px;  
-}
-
-.triangles {
-  position: absolute;
-  top: -100px;
-  left: 0;
-  display: flex;
-  width: 100%;
-}
-
-.triangle__left {   
-  fill: #ffffff;
-  width: 50%;    
-  height: 100px;
-}
-
-.triangle__right {
-  fill: #ffffff;    
-  height: 100px;
-  width: 50%;
+  padding-top: 40px;
+  
+  @include tablet {
+    justify-content: center;
+  }
 }
 
 .articles__list {
   width: 20%;
   margin-right: 10%;
   text-align: right;
+
+  @include tablet {
+    display: none;    
+  }
 }
 
 .articles__item {
@@ -44,18 +32,13 @@
   color: $green;
 }
 
-
-
-
-
-
-
-
-
-
 .articles__content {
   width: 60%;
   text-align: justify;
+
+  @include tablet {
+    width: 90%;    
+  }
 }
 
 .articles__block {

@@ -1,4 +1,4 @@
-.triangles {
+.triangle {
   position: absolute;
   top: -100px;
   left: 0;
@@ -9,6 +9,29 @@
 .triangle__left,
 .triangle__right {   
   fill: #ffffff;
-  width: 50%;    
+  width: 100%;    
   height: 100px;
+}
+
+.triangle-fill__white {   
+  position: absolute;
+  top: -10%;
+  left: 0;
+  fill: #fff;    
+  width: 50%;
+  height: 10%;
+}
+
+
+.triangle-fill__beige {
+  position: absolute;
+  top: -10%;
+  right: 0;
+  fill: $beige;    
+  width: 50%;
+  height: 10%;
+
+  @include tablet {        
+      fill: #fff;
+  }
 }

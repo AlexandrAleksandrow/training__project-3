@@ -11,8 +11,10 @@ block content
 
   section.about
     .about__left
-      svg(viewBox="0 0 500 100" preserveAspectRatio="none").triangle.triangle_fill_white
-        <polygon points="0 0, 500 100, 0 100"/> 
+      svg(viewBox="0 0 500 100" preserveAspectRatio="none").triangle.triangle-fill__white
+        <polygon points="0 0, 500 100, 0 100"/>
+      svg(viewBox="0 0 500 100" preserveAspectRatio="none").triangle.triangle-fill__beige
+           <polygon points="500 0, 500 100, 0 100"/> 
         
       .about__left-title
         p.block__title - Обо мне -
@@ -25,18 +27,14 @@ block content
             .block__subtitle - Кто я -
           .user-descrioption__text.text__content
             p Я начинающий веб разработчик. Мне 28 лет. Занимаюсь разработкой сайтов и приложений. 
-            p Этот сайт я сделал в рамках обучения, в школе онлайн образования LoftSchool.
+            
     
-    
-    .about__right
-      svg(viewBox="0 0 500 100" preserveAspectRatio="none").triangle.triangle_fill_beige
-           <polygon points="500 0, 500 100, 0 100"/> 
-                
+    .about__right                      
       .aubout__right-titile
         .block__subtitle - Чем я могу быть полезен -
         .about__right-description.text__content
           p Больше всего меня привлекает Frontend.
-          p Skills:
+          p Здесь я буду отображать свои навыки:
         .about__right-content
           -
             var skills = [
@@ -58,21 +56,21 @@ block content
 
   section.map
     .map-google      
-    .map__data
-      .contacts
-        address.contacts-data
-          h3.contacts__titile
-            .block__subtitle - Контакты -
-          ul.contacts__list
-            li.contacts__item.contacts__row
-              +icon('skype', 'contacts__icon-img')
-              p.contacts-row.contacts__title skype_adress
-            li.contacts__item.contacts__row
-              +icon('envelope', 'contacts__icon-img')
-              p.contacts-row.contacts__title limasowalexandr@gmail.com'
-            li.contacts__item.contacts__row
-              +icon('phone2', 'contacts__icon-img')
-              p.contacts-row.contacts__title 89525888252
-            li.contacts__item.contacts__row
-              +icon('map_marker', 'contacts__icon-img')
-              p.contacts-row.contacts__title 347900, Россия, Ростовская обл., г.Таганрог  
+      .map__data
+        .contacts
+          address.contacts-data
+            h3.contacts__titile
+              .block__subtitle - Контакты -
+            ul.contacts__list
+              li.contacts__item.contacts__row
+                +icon('skype', 'contacts__icon-img')
+                p.contacts-row.contacts__title skype_adress
+              li.contacts__item.contacts__row
+                +icon('envelope', 'contacts__icon-img')
+                p.contacts-row.contacts__title limasowalexandr@gmail.com'
+              li.contacts__item.contacts__row
+                +icon('phone2', 'contacts__icon-img')
+                p.contacts-row.contacts__title 89525888252
+              li.contacts__item.contacts__row
+                +icon('map_marker', 'contacts__icon-img')
+                p.contacts-row.contacts__title 347900, Россия, Ростовская обл., г.Таганрог  
