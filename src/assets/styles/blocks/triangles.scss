@@ -1,37 +1,40 @@
-.triangle {
-  position: absolute;
-  top: -100px;
-  left: 0;
+.triangles {
   display: flex;
+  position: absolute;
+  left: 0; 
+  top: -100px;
   width: 100%;
+
+  @include tablet {        
+    top: -70px;
+  }
+}
+
+.triangle {
+  height: 100px;
+  
+  @include tablet {        
+    height: 70px;
+  }
 }
 
 .triangle__left,
 .triangle__right {   
   fill: #ffffff;
-  width: 100%;    
-  height: 100px;
+  width: 100%;  
 }
 
-.triangle-fill__white {   
-  position: absolute;
-  top: -10%;
-  left: 0;
+.triangle-fill__white {  
   fill: #fff;    
-  width: 50%;
-  height: 10%;
+  width: 50%;  
 }
 
 
-.triangle-fill__beige {
-  position: absolute;
-  top: -10%;
-  right: 0;
+.triangle-fill__beige {  
   fill: $beige;    
-  width: 50%;
-  height: 10%;
+  width: 50%;  
 
   @include tablet {        
-      fill: #fff;
+    fill: #fff;
   }
 }

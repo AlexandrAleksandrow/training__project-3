@@ -2,12 +2,16 @@ extends ../auth.layout.pug
 
 block content
   section.section.welcome
+    .backgrounds
+      img.backgrounds__layer.layer1(src="../../assets/images/mount.jpg", alt="mounts")
+      img.backgrounds__layer.layer2(src="../../assets/images/clouds.png", alt="clouds")
+
     include button    
 
     .welcome__block
       .weclome__content
         img.author__face(src='../../assets/images/face.jpg', alt='author__face')          
-        .author__name Лимасов Александр
+        .author__name Александр Лимасов
         .auhthor__greeting Начинающий веб разработчик 
         include social
 

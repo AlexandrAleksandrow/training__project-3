@@ -10,6 +10,12 @@ block content
   include header
 
   section.about
+    .triangles
+      svg(viewBox="0 0 500 100" preserveAspectRatio="none").triangle.triangle-fill__white
+        <polygon points="0 0, 500 100, 0 100"/>
+
+      svg(viewBox="0 0 500 100" preserveAspectRatio="none").triangle.triangle-fill__beige
+        <polygon points="500 0, 500 100, 0 100"/>
         
     .about__left        
       .about__left-title
@@ -22,7 +28,7 @@ block content
           .user-descrioption__titile
             .block__subtitle - Кто я -
           .user-descrioption__text.text__content
-            p Я начинающий веб разработчик. Мне 28 лет. Занимаюсь разработкой сайтов и приложений. 
+            p Я начинающий веб разработчик. Мне 28 лет. Очень люблю разрабатывать сайты. 
             
     
     .about__right                      

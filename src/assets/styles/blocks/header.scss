@@ -30,22 +30,17 @@
   align-items: center;
 }
 
-.hamburger__img {
+.hamburger {
   position: absolute;
   top: 5%;
   right: 5%;
-  display: block;
-  width: 25px;
-  height: 25px;
-  fill: $grey;
+  display: block;  
+}
 
-  &:hover {
-    fill: $green;
-  } 
-  
-  @include tablet {
-    fill: #ffffff;
-  }
+.hamburger__img {
+  width: 25px;
+  height: 25px;  
+  fill: #ffffff;
 }
 
 .user__pic-img {

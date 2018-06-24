@@ -23,6 +23,10 @@
   font-weight: 700;
   font-size: 30px;
   cursor: pointer;
+
+  &:hover {
+    color: $grey;
+  }
 }
 
 .fullscreen__item {

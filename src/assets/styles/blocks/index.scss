@@ -10,9 +10,7 @@
 }*/
 
 section { 
- // min-height: 100vh;
   position: relative;
-  //min-height: rem(650px);
 }
 
 .welcome {
@@ -21,12 +19,20 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;    
-	background: url(../../assets/images/mount.jpg) center center/cover no-repeat $light-grey;
+	//background: url(../../assets/images/mount.jpg) center center/cover no-repeat $light-grey;
+}
+
+.backgrounds {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .welcome__block {
   position: relative;
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
@@ -59,16 +65,13 @@ section {
 .menu {
   display: flex;
   justify-content: center;
-  align-items: center;
- // min-width: 380px;  
+  align-items: center;  
 }
 
 .menu__link {
   display: flex;
   justify-content: center;
-  align-items: center;
-  //width: 33.33333%;
- // height: 50px;
+  align-items: center;  
   background: $green;
   opacity: .8;
   cursor: pointer;
