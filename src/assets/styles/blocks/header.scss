@@ -31,16 +31,21 @@
 }
 
 .hamburger {
-  position: absolute;
+  position: fixed;
   top: 5%;
   right: 5%;
-  display: block;  
+  display: block;
+  z-index: 10;  
 }
 
 .hamburger__img {
   width: 25px;
   height: 25px;  
-  fill: #ffffff;
+  fill: $grey;
+
+  &:hover {
+    fill: $green;
+  }
 }
 
 .user__pic-img {

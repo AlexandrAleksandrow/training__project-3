@@ -15,20 +15,79 @@ section {
 
 .welcome {
   height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;    
-	//background: url(../../assets/images/mount.jpg) center center/cover no-repeat $light-grey;
+	background: url(../../assets/images/mount.jpg) center center/cover no-repeat $light-grey;
+  overflow: hidden;
 }
 
-.backgrounds {
+/*.backgrounds {
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}*/
+
+.parallax__img {
+  position: absolute;
+  display: block;
+  width: 30%;
+  height: 25%;
+
+  @include tablet {
+    height: 10%;
+  }
 }
+
+.layer1 {
+  top: 30%;
+  left: 10%;
+  z-index: 15;
+}
+
+.layer2 {
+  width: 120%;
+  height: 60%;
+  bottom: 0;
+  right: 0;
+  z-index: 20;
+}
+
+.layer3 {
+  top: 50%;
+  left: 50%;
+  z-index: 30;
+}
+
+.layer4 {
+  width: 120%;
+  height: 60%;
+  top: 30%;
+  left: -10%;
+  z-index: 10;
+}
+
+.layer5 {
+  width: 120%;
+  height: 40%;
+  top: 20%;
+  left: -10%;
+  z-index: 9;
+}
+
+.layer6 {
+  width: 120%;
+  height: 40%;
+  top: 15%;
+  left: -10%;
+  z-index: 5;
+}
+
+
 
 .welcome__block {
   position: relative;
@@ -41,6 +100,7 @@ section {
   opacity: .95;
   border-radius: 7px; 
   padding-top: 20px;
+  z-index: 100;
 }
 
 .weclome__content {
