@@ -159,9 +159,8 @@
     stroke: $green;
     stroke-dasharray: 251;
     stroke-dashoffset: 100;
-    animation: fill 2s linear;
-    //animation-delay: 0.4s;
-}  
+    animation: fill 2s linear;    
+} 
 
 @keyframes fill {
     0% {
