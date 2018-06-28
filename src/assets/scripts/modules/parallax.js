@@ -12,7 +12,7 @@ function Parallax() {
         const pos_x = `${e.pageX / speed}px`
         const pos_y = `${e.pageY / speed}px`
         
-        console.log(speed)
+        //console.log(speed)
 
         layers[i].style.transform=`translate3d(${pos_x}, ${pos_y}, 0)`
 

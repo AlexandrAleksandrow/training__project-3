@@ -88,6 +88,12 @@ section {
 }
 
 
+.flip__container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
 
 .welcome__block {
   position: relative;
@@ -101,6 +107,8 @@ section {
   border-radius: 7px; 
   padding-top: 20px;
   z-index: 100;
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 
 .weclome__content {
@@ -164,4 +172,21 @@ section {
   color: $white;
   font-weight: 300;  
   margin-bottom: 10px;
+  z-index: 100;
+}
+
+//Flip
+
+.flip__welcome {
+  &.welcome__block {
+    transform: rotateY(180deg);
+    transition: 0.5s;
+  }  
+}
+
+.flip__welcome--remove {
+  &.welcome__block {
+    transform: rotateY(360deg);
+    transition: 0.5s;
+  }  
 }
