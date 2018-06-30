@@ -111,15 +111,14 @@
 
 .swipe {
   display: none;
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  top: 50%;
-  left: 100%;
-  cursor: pointer;
-
-  @include tablet {
-    display: block;    
+  
+  @include tablet {     
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    cursor: pointer;   
   }
 }
 

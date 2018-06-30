@@ -3,8 +3,7 @@ const articlesList = document.querySelector('.articles__list')
 const swipe = document.querySelector('.swipe')
 
 //задание сайдбару position: fixed и появление зеленого полукруга по скроллу
-document.addEventListener ('scroll', e => {  
-  console.log(articles.getBoundingClientRect())
+document.addEventListener ('scroll', e => {    
   if(articles.getBoundingClientRect().top < -33) {
     articlesList.classList.add('articles__list--fixed')        
   }
@@ -16,18 +15,17 @@ document.addEventListener ('scroll', e => {
 
 //Появление зеленого полукруга
 document.addEventListener ('scroll', e => {  
-  console.log(articles.getBoundingClientRect())
-  if(articles.getBoundingClientRect().top < 250) {
+  if(articles.getBoundingClientRect().top < 250 && window.innerWidth <= 768) {
     swipe.style.display = 'block'        
   }
   
-  if(articles.getBoundingClientRect().top > 250) {
+  if(articles.getBoundingClientRect().top > 250 && window.innerWidth <= 768) {
     swipe.style.display = 'none'        
   }
 })
 
 
-// открытие сайдбара по клику на полукруг
+// открытие и закрытие сайдбара по клику на полукруг
 swipe.addEventListener ('click', e => {
   (!articlesList.classList.contains('articles__list--open'))
   ? articlesList.classList.add('articles__list--open')
