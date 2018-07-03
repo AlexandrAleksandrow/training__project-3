@@ -28,7 +28,7 @@ block content
           .user-descrioption__titile
             .block__subtitle - Кто я -
           .user-descrioption__text.text__content
-            p Я начинающий веб разработчик. Мне 28 лет. Очень люблю разрабатывать сайты. 
+            p Я начинающий веб разработчик. Мне 28 лет. Люблю делать интересые сайты. 
             
     
     .about__right                      
@@ -36,13 +36,13 @@ block content
         .block__subtitle - Чем я могу быть полезен -
         .about__right-description.text__content
           p Больше всего меня привлекает Frontend.
-          p Здесь я буду отображать свои навыки:
+          p Здесь будут отображаться мои навыки:
         .about__right-content
           -
             var skills = [
               ['Frontend', [['HTML 5', 70], ['CSS 3', 60], ['JavaScript', 35]]],
-              ['Backend', [['PHP', 30], ['Laravel', 50], ['MySQL', 70]]],
-              ['Workflow', [['GIT', 30], ['Sass', 50], ['Gulp', 70]]],
+              ['Frontend', [['PUG', 30], ['Sass', 50], ['Gulp', 70]]],
+              ['Workflow', [['GIT', 30], ['SVG', 50], ['Adaptability', 70]]],
             ]
           ul.skills-list
             each skillsrow in skills              
@@ -66,10 +66,10 @@ block content
             ul.contacts__list
               li.contacts__item.contacts__row
                 +icon('skype', 'contacts__icon-img')
-                p.contacts-row.contacts__title skype_adress
+                p.contacts-row.contacts__title limasowalexandr@gmail.com
               li.contacts__item.contacts__row
                 +icon('envelope', 'contacts__icon-img')
-                p.contacts-row.contacts__title limasowalexandr@gmail.com'
+                p.contacts-row.contacts__title limasowalexandr@gmail.com
               li.contacts__item.contacts__row
                 +icon('phone2', 'contacts__icon-img')
                 p.contacts-row.contacts__title 89525888252
