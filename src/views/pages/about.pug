@@ -57,22 +57,23 @@ block content
                           .skill__title #{skill[0]}
 
   section.map
-    .map-google      
-      .map__data
-        .contacts
-          address.contacts-data
-            h3.contacts__titile
-              .block__subtitle - Контакты -
-            ul.contacts__list
-              li.contacts__item.contacts__row
-                +icon('skype', 'contacts__icon-img')
-                p.contacts-row.contacts__title limasowalexandr@gmail.com
-              li.contacts__item.contacts__row
-                +icon('envelope', 'contacts__icon-img')
-                p.contacts-row.contacts__title limasowalexandr@gmail.com
-              li.contacts__item.contacts__row
-                +icon('phone2', 'contacts__icon-img')
-                p.contacts-row.contacts__title 89525888252
-              li.contacts__item.contacts__row
-                +icon('map_marker', 'contacts__icon-img')
-                p.contacts-row.contacts__title 347900, Россия, Ростовская обл., г.Таганрог  
+    .map__yandex
+      .YMaps#YMapsID 
+    .map__data
+      .contacts
+        .contacts-data
+          h3.contacts__titile
+            .block__subtitle - Контакты -
+          ul.contacts__list
+            li.contacts__item.contacts__row
+              +icon('skype', 'contacts__icon-img')
+              a(href="skype:limasowalexandr@gmail.com").contacts__link limasowalexandr@gmail.com
+            li.contacts__item.contacts__row
+              +icon('envelope', 'contacts__icon-img')
+              a(href="mailto:limasowalexandr@gmail.com").contacts__link limasowalexandr@gmail.com
+            li.contacts__item.contacts__row
+              +icon('phone2', 'contacts__icon-img')
+              a(href="href=tel:+79525888252").contacts__link +79-525-888-252
+            li.contacts__item.contacts__row
+              +icon('map_marker', 'contacts__icon-img')
+              p.contacts__link 347900, Россия, Ростовская обл., г.Таганрог  
