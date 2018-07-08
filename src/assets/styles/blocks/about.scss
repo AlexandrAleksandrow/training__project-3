@@ -149,9 +149,15 @@
     transform: rotate(-90deg);
 }
 
+.skill__circle-inner,
 .skill__circle {
     fill: transparent;
-    stroke-width: 20px;    
+    stroke-width: 20px;
+}
+
+.skill__circle_under {
+    stroke: $light-grey;
+    stroke-dasharray: 251;
 }
 
 .skill__circle_above {
@@ -159,7 +165,7 @@
     stroke-dasharray: 251;
     stroke-dashoffset: 100;
     animation: fill 2s linear;    
-} 
+}
 
 @keyframes fill {
     0% {
