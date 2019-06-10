@@ -4,32 +4,10 @@ block variables
   - var title = 'Мои работы'
 
 block scripts
-  script(src='about.bundle.js')
+  script(src='works.bundle.js')
 
 block content
-  section.hero
-    .hero_links
-      a.social__link(href="http://vk.com/id448870148", target="_blank")
-        +icon('vk', 'about__social-img') 
-      a.social__link(href="https://github.com/AlexandrAleksandrow/", target="_blank")
-        +icon('github', 'about__social-img')
-      a.social__link(href="https://github.com/AlexandrAleksandrow/", target="_blank")
-        +icon('in', 'about__social-img') 
-      
-    a(href="#").hamburger.hero__menu
-      +icon('hamburger', 'hamburger__img')
-
-    .hero__title
-      .section__title      
-        .user
-          .user__pic            
-            +image('../../assets/images/face.jpg', 'face', 'user__pic-img')
-          .user__description
-            .user__name Александр Лимасов
-            .user__info Начинающий веб разработчик
-    
-    a(href="#").hero_down-btn.down__btn
-      +icon('arrow_down', 'arrow-down__img')
+  include header
 
   include works__slider
 
@@ -56,13 +34,13 @@ block content
             +image('../../assets/images/saban.png', 'feedback__man', 'feedback__man-pic')
           .feedback__man-block
             .feedback__man-name Владимир Сабанцев
-            .feedback__man-description Преподаватель LoftScholl 
+            .feedback__man-description Преподаватель 
     .form__block
       .form__blur
       form.form(action="" name="form")
         h3.form__caption - связаться со мной -
-        input.form__input(type="text" placeholder="Имя")
-        input.form__input(type="text" placeholder="Email") 
+        input.form__input.form__input-name(type="text" placeholder="Имя")
+        input.form__input.form__input-email(type="text" placeholder="Email") 
         textarea.form__textarea(name="textarea", placeholder="Ваше сообщение")
         .form__block-button
           button.form__button.button__left Отправить

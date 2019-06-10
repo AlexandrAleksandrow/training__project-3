@@ -30,17 +30,21 @@
   align-items: center;
 }
 
-.hamburger__img {
-  position: absolute;
+.hamburger {
+  position: fixed;
   top: 5%;
   right: 5%;
   display: block;
+  z-index: 10;  
+}
+
+.hamburger__img {
   width: 25px;
-  height: 25px;
+  height: 25px;  
   fill: $grey;
 
   &:hover {
-      fill: $green;
+    fill: $green;
   }
 }
 

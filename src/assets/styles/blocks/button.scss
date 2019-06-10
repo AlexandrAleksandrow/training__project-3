@@ -10,9 +10,15 @@
   border-radius: 5px;
   color: $grey;
   font-weight: 500;
+  z-index: 100;
 
   &:hover {
     background-color: #fff;
     color: $green;
+  }
+
+  @include phone {        
+    left: 50%;
+    transform: translateX(-50%);    
   }
 }

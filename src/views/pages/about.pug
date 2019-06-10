@@ -4,39 +4,20 @@ block variables
   - var title = 'Обо мне'
 
 block scripts
-  script(src='about.bundle.js')
+  script(src='about.bundle.js')  
 
 block content
-  section.hero
-    .hero_links
-      a.social__link(href="http://vk.com/id448870148", target="_blank")
-        +icon('vk', 'about__social-img') 
-      a.social__link(href="https://github.com/AlexandrAleksandrow/", target="_blank")
-        +icon('github', 'about__social-img')
-      a.social__link(href="https://github.com/AlexandrAleksandrow/", target="_blank")
-        +icon('in', 'about__social-img') 
-      
-    a(href="#").hamburger.hero__menu
-      +icon('hamburger', 'hamburger__img')
-
-    .hero__title
-      .section__title      
-        .user
-          .user__pic            
-            +image('../../assets/images/face.jpg', 'face', 'user__pic-img')
-          .user__description
-            .user__name Александр Лимасов
-            .user__info Начинающий веб разработчик
-    
-    a(href="#").hero_down-btn.down__btn
-      +icon('arrow_down', 'arrow-down__img')
+  include header
 
   section.about
-    .about__left
-      svg(viewBox="0 0 500 100" preserveAspectRatio="none").triangle.triangle_fill_white
+    .triangles
+      svg(viewBox="0 0 500 100" preserveAspectRatio="none").triangle.triangle-fill__white
         <polygon points="0 0, 500 100, 0 100"/>
-      
+
+      svg(viewBox="0 0 500 100" preserveAspectRatio="none").triangle.triangle-fill__beige
+        <polygon points="500 0, 500 100, 0 100"/>
         
+    .about__left        
       .about__left-title
         p.block__title - Обо мне -
       .about__left-content
@@ -47,24 +28,21 @@ block content
           .user-descrioption__titile
             .block__subtitle - Кто я -
           .user-descrioption__text.text__content
-            p Я начинающий веб разработчик. Мне 28 лет. Занимаюсь разработкой сайтов и приложений. 
-            p Этот сайт я сделал в рамках обучения, в школе онлайн образования LoftSchool.
+            p Я начинающий веб разработчик. Мне 28 лет. Люблю делать интересые сайты. 
+            
     
-    
-    .about__right
-      svg(viewBox="0 0 500 100" preserveAspectRatio="none").triangle.triangle_fill_beige
-           <polygon points="500 0, 500 100, 0 100"/>      
+    .about__right                      
       .aubout__right-titile
         .block__subtitle - Чем я могу быть полезен -
         .about__right-description.text__content
           p Больше всего меня привлекает Frontend.
-          p Skills:
+          p Здесь будут отображаться мои навыки:
         .about__right-content
           -
             var skills = [
-              ['Frontend', [['HTML 5', 70], ['css3', 60], ['JavaScript', 35]]],
-              ['Backend', [['PHP', 30], ['Laravel', 50], ['MySQL', 70]]],
-              ['Workflow', [['GIT', 30], ['Sass', 50], ['Gulp', 70]]],
+              ['Frontend', [['HTML 5', 70], ['CSS 3', 60], ['JavaScript', 35]]],
+              ['Frontend', [['PUG', 30], ['Sass', 50], ['Gulp', 70]]],
+              ['Workflow', [['GIT', 30], ['SVG', 50], ['Adaptability', 70]]],
             ]
           ul.skills-list
             each skillsrow in skills              
@@ -74,27 +52,28 @@ block content
                       li.skills-row__item
                         figure.skill
                           svg(viewBox="0 0 100 100" preserveAspectRatio="none").skill__figure
-                            circle(cx="50" cy="50" r="40").skill__circle.skill__circle_under
-                            circle(cx="50" cy="50" r="40").skill__circle.skill__circle_above
+                            circle(cx="50" cy="50" r="40").skill__circle-inner
+                            circle(cx="50" cy="50" r="40").skill__circle
                           .skill__title #{skill[0]}
 
   section.map
-    .map-google      
+    .map__yandex
+      .YMaps#YMapsID 
     .map__data
       .contacts
-        address.contacts-data
+        .contacts-data
           h3.contacts__titile
             .block__subtitle - Контакты -
           ul.contacts__list
             li.contacts__item.contacts__row
               +icon('skype', 'contacts__icon-img')
-              p.contacts-row.contacts__title skype_adress
+              a(href="skype:limasowalexandr@gmail.com").contacts__link limasowalexandr@gmail.com
             li.contacts__item.contacts__row
               +icon('envelope', 'contacts__icon-img')
-              p.contacts-row.contacts__title limasowalexandr@gmail.com'
+              a(href="mailto:limasowalexandr@gmail.com").contacts__link limasowalexandr@gmail.com
             li.contacts__item.contacts__row
               +icon('phone2', 'contacts__icon-img')
-              p.contacts-row.contacts__title 89525888252
+              a(href="href=tel:+79525888252").contacts__link +79-525-888-252
             li.contacts__item.contacts__row
               +icon('map_marker', 'contacts__icon-img')
-              p.contacts-row.contacts__title 347900, Россия, Ростовская обл., г.Таганрог  
+              p.contacts__link 347900, Россия, Ростовская обл., г.Таганрог  

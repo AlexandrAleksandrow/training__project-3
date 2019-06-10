@@ -1,0 +1,40 @@
+.triangles {
+  display: flex;
+  position: absolute;
+  left: 0; 
+  top: -100px;
+  width: 100%;
+
+  @include tablet {        
+    top: -70px;
+  }
+}
+
+.triangle {
+  height: 100px;
+  
+  @include tablet {        
+    height: 70px;
+  }
+}
+
+.triangle__left,
+.triangle__right {   
+  fill: #ffffff;
+  width: 100%;  
+}
+
+.triangle-fill__white {  
+  fill: #fff;    
+  width: 50%;  
+}
+
+
+.triangle-fill__beige {  
+  fill: $beige;    
+  width: 50%;  
+
+  @include tablet {        
+    fill: #fff;
+  }
+}

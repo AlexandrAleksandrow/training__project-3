@@ -1,20 +1,39 @@
 section.works
-    .works__caption
-      +icon('works_header', 'works_caption-ico')
-      h2.works__caption-text - Мои работы -
-    .works__block
-      .works__left
-        .works__site
-          h3.works__name Сайт авиакомпании
-          .works__decs HTML, CSS
-        .works__site
-          h3.works__name Лендинг BurgerSchop
-          .works__decs HTML, CSS, JS
-        .works__site
-          h3.works__name Учебное портфолио
-          .works__decs HTML, CSS, JS, Gulp, Webpack, Vue
-        a(href="#").works__button
-          +icon('link', 'works__button-ico')
-          p.works__button-text Посмотреть сайт
+    .triangles
+        svg(viewBox="0 0 500 100" preserveAspectRatio="none").triangle.triangle__left
+          <polygon points="0 0, 500 100, 0 100"/>
 
-      .works__right
+        svg(viewBox="0 0 500 100" preserveAspectRatio="none").triangle.triangle__right
+          <polygon points="500 0, 500 100, 0 100"/>
+    .works__title
+      +icon('works_header', 'works_title-ico')
+      h2.works__title-text - Мои работы -
+    
+    .slider
+    
+      .slider-text
+        .slider-text__container
+          h3.slider-text__subtitle - Сайт авиакомпании -
+          .slider-left__tech HTML, CSS
+          a.slider-btn(href="#")
+            +icon('link', 'slider__button-ico')
+            p.slider-btn__text Посмотреть сайт
+
+      .slider-head
+        .slider-head__container
+          img.slider-head__img(src="../../assets/images/Airplane.png", alt="Big img")
+
+      .slider-slide
+        .slider-slide__container
+          .slider-slide__block
+            a.slider-slide__link(href="#")
+              +icon('arrow_down', 'slider-slide__ico')
+            .slider-slide__item
+              img.slider-slide__img(src="../../assets/images/BurgerShop.png", alt="little.img")
+          .slider-slide__block
+            a.slider-slide__link(href="#")
+              +icon('arrow_down', 'slider-slide__ico slider-slide__ico-tr')
+            .slider-slide__item
+              img.slider-slide__img(src="../../assets/images/training-portfolio.png", alt="little.img")
+
+      

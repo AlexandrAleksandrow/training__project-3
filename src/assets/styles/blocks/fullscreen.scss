@@ -1,0 +1,45 @@
+.fullscreen {
+  display: /*flex*/none;
+  position: fixed;  
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: $green;
+  opacity: 0.95;
+  z-index: 100;
+  text-align: center;
+}
+
+.fullscreen__close {
+  position: absolute;
+  top: 3%;
+  right: 5%;
+  color: $white;
+  font-weight: 700;
+  font-size: 30px;
+  cursor: pointer;
+
+  &:hover {
+    color: $grey;
+  }
+}
+
+.fullscreen__item {
+  margin-bottom: 30px;
+}
+
+.fullscreen__link {
+  color: $white;
+  font-family: bernier;
+  font-size: 40px;
+  text-decoration: none;
+
+  &:hover {
+    color: $grey;
+  }
+}

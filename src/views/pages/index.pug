@@ -2,57 +2,70 @@ extends ../auth.layout.pug
 
 block content
   section.section.welcome
-    include button    
+    .preloader#preloader
+      .loader#loader
 
-    .welcome__block
-      .weclome__content
-        img.author__face(src='../../assets/images/face.jpg', alt='author__face')          
-        .author__name Лимасов Александр
-        .auhthor__greeting Начинающий веб разработчик
-        include social
+    img.parallax__img.layer6(src="../../assets/images/parallax/Layer 7.png", alt="#")
+    img.parallax__img.layer5(src="../../assets/images/parallax/Layer 6.png", alt="#")
+    img.parallax__img.layer4(src="../../assets/images/parallax/Layer 4.png", alt="#")
+    img.parallax__img.layer1(src="../../assets/images/parallax/sky.png", alt="#")
+    img.parallax__img.layer2(src="../../assets/images/parallax/Layer 1.png", alt="#")
+    img.parallax__img.layer3(src="../../assets/images/parallax/cloud_PNG4.png", alt="#")
+    
+    include button
 
-    .menu
-      a.menu__link.left__corner(href="works.html", title="myWorks") Мои работы
-      a.menu__link(href="about.html", title="about") Обо мне
-      a.menu__link.right__corner(href="blog.html", title="blog") Блог
-      p.copy &copy; Alexandr Limasow | created in LoftSchool | 2018
+    .flip__container    
+      
+      .welcome__block
+        .weclome__content
+          img.author__face(src='../../assets/images/face.jpg', alt='author__face')          
+          .author__name Александр Лимасов
+          .auhthor__greeting Начинающий веб разработчик 
+          include social
+        .menu
+          a.menu__link.left__corner(href="about.html", title="myWorks") Обо мне
+          a.menu__link(href="works.html", title="about") Мои работы
+          a.menu__link.right__corner(href="blog.html", title="blog") Блог
+
+      .auth__container
+        form#form.auth(action='server.php', method='post', name='form')
+          .auth__title - авторизуйтесь -
+          .auth__row
+            .auth__input-pic
+              +icon('login', 'auth__input-ico')
+            input.auth__input.auth__input-login(type="text" placeholder="Логин" name="login")
+          .auth__row
+            .auth__input-pic
+              +icon('password', 'auth__input-ico')
+            input.auth__input.auth__input-password(type="text" placeholder="Пароль" name="password")
+          .auth__row
+            label.auth__checkbox
+              input.auth__checkbox--invisible(type="checkbox" name="check__box")
+              .auth__checkbox--visible
+                .auth__checkbox-pic
+                  //+ico('check', 'auth__checkbox-ico')
+              span.auth__checkbox-text Я человек
+          .auth__radio      
+            h4.auth__subtitle Вы точно не робот?
+            .auth__row
+              label.auth__button
+                input.auth__radioBtn(type="radio" name="yes" value="radio1")
+                .form__circle
+                  .form__circle-inner
+                span.auth__radio-text Да
+              label.auth__button
+                input.auth__radioBtn(type="radio" name="yes" value="radio1")
+                .form__circle
+                  .form__circle-inner
+                span.auth__radio-text Не уверен
+          .auth__row.row-btn   
+            a.auth__btn.left-btn(href="#")
+              p.auth__btn-text На главную
+            a.auth__btn.right-btn(href="#")
+              p.auth__btn-text Войти    
+
+
     
+    p.copy &copy; Alexandr Limasow | 2018  
     
-    //- uathorization
-    
-    
-    form#form.auth(action='server.php', method='post', name='form')
-      .auth__title - авторизуйтесь -
-      .auth__row
-        .auth__input-pic
-          +icon('login', 'auth__input-ico')
-        input.auth__input(type="text" placeholder="Логин")
-      .auth__row
-        .auth__input-pic
-          +icon('password', 'auth__input-ico')
-        input.auth__input(type="text" placeholder="Пароль")
-      .auth__row
-        label.auth__checkbox(for="#")
-          input.auth__checkbox--invisible(type="checkbox" name="check__box")
-          .auth__checkbox--visible
-            .auth__checkbox-pic
-              //+ico('check', 'auth__checkbox-ico')
-          span.auth__checkbox-text Я человек
-      .auth__radio      
-        h4.auth__subtitle Вы точно не робот?
-        .auth__row
-          label(for="#").auth__button
-            input.auth__radioBtn(type="radio" name="yes" value="radio1" id="human")
-            .form__circle
-              .form__circle-inner
-            span.auth__radio-text Да
-          label(for="#").auth__button
-            input.auth__radioBtn(type="radio" name="yes" value="radio1" id="humanoid")
-            .form__circle
-              .form__circle-inner
-            span.auth__radio-text Не уверен
-      .auth__row.row-btn   
-        a.auth__btn.left-btn(href="#")
-          p.auth__btn-text На галавную
-        a.auth__btn.right-btn(href="#")
-          p.auth__btn-text Войти   
+       

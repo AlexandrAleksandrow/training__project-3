@@ -1,17 +1,24 @@
 // form
 
+.auth__container {
+  position: absolute;
+  z-index: 90;
+}
+
 .auth {
   position: relative;
-  display: /*flex*/none;
+  display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  width: 380px;
-  height: 410px;
+  align-items: center; 
   background: $white;
   opacity: 0.9;
-  padding: 2%;
+  padding: 15px;
   border-radius: 5px;
+  backface-visibility: hidden;
+  z-index: 90;
+  transform: rotateY(180deg);
+  perspective: 1000px;
 }
 
 .auth__title {
@@ -19,7 +26,7 @@
   font-family: "bernier";
   line-height: 1.2;
   text-align: center;
-  margin-bottom: 40px;    
+  margin-bottom: 30px;    
 }
 
 .auth__row {
@@ -50,18 +57,22 @@
 }
 
 .auth__input {
-  width: 290px;
+  width: 90%;
   height: 45px;
   border: 1px solid transparent;
   border-radius: 0 5px 5px 0;
   padding: 5px;
+  outline: none;
 }
 
 .auth__checkbox {
   display: flex;
+  position: relative;
 }
 
 .auth__checkbox--invisible {
+  position: absolute;
+  left: -999999px;
   
   
   &:checked + .auth__checkbox--visible {
@@ -96,7 +107,7 @@
 
 .auth__radio {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 64px;
 }
 
 .auth__subtitle {
@@ -107,9 +118,11 @@
 }
 
 .auth__button {
+  position: relative;
   display: flex;
   align-items: center;
   margin-right: 40px;
+  cursor: pointer;
 
   &:last-child {
     margin-right: 0;
@@ -124,10 +137,12 @@
   height: 20px;
   border: 1px solid $grey;
   border-radius: 50%;
+  margin-right: 10px;
+
 }
 
 .form__circle-inner {
-  display: none/*block*/;
+  display: none;
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -135,7 +150,9 @@
 }
 
 .auth__radioBtn {
-
+  position: absolute;
+  left: -9999px;
+  
   &:checked + .form__circle .form__circle-inner {
     display: block;
   }
@@ -157,14 +174,20 @@
   justify-content: center;
   align-items: center;
   width: 50%;
-  height: 45px;
+ // height: 45px;
   background: $green;
   border-right: 1px solid $white;
   color: $white;
   text-decoration: none;
+  opacity: 0.9;
+  padding: 19px;
 
   &:last-child {
     border-right: none;
+  }
+
+  &:hover {
+    opacity: 1;
   }
 }
 
@@ -174,4 +197,19 @@
 
 .right-btn {
   border-radius: 0 0 5px 0;
+}
+
+
+.flip__auth {
+  &.auth {
+    transform: rotateY(360deg);
+    transition: 0.5s;
+  }
+}
+
+.flip__auth--remove {
+  &.auth {
+    transform: rotateY(180deg);
+    transition: 0.5s;
+  }
 }

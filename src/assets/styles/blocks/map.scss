@@ -1,39 +1,65 @@
+.YMaps,
+.map__yandex {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
 .map {
-  background: url(../../assets/images/map.jpg) center center/cover no-repeat; 
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   font-style: normal;
+  height: 100vh;
+}
+
+.map-google {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: url(../../assets/images/map.png) center center/cover no-repeat;
+
+  @include phone {
+    align-items: flex-start;
+  }
 }
 
 .map__data {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  width: 35%;
-  height: 300px;
+  align-items: center;  
   background: $white;
-  opacity: .8;
+  opacity: 0.9;
   border-radius: 10px;
+  z-index: 50;
 
   &:hover {
       opacity: 1;
   }
+
+  @include phone {
+    width: 100%;
+  }
 }
 
 .contacts-data {
-  width: 100%;
-  height: 280px;
   margin: 0;
-  padding: 5%; 
+  padding: 5%;
+  z-index: 100;
 }
 
 .contacts__row {
 display: flex;
 margin-bottom: 20px;
-text-decoration: none;
-text-decoration: none;
 }
 
 .contacts__icon-img {
@@ -41,4 +67,9 @@ text-decoration: none;
   height: 30px;
   fill: $green;
   margin-right: 5%;
+}
+
+.contacts__link {
+  text-decoration: none;
+  color: $grey;
 }
